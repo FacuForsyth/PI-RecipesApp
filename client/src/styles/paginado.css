@@ -1,0 +1,39 @@
+.pag-div {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: stretch;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  margin: 10px
+}
+
+li {
+  list-style:none;
+  margin: 10px;
+  width: 40px;
+}
+
+.pag-btn {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: larger;
+  width: 50px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: green;
+  color:white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.pag-btn:hover {
+  background-color: white;
+  color:gray
+}

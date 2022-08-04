@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.error_notfound{
+  background-image: url('https://www.policyadvocate.com/wp-content/uploads/2019/10/image2.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  font-family: "Montserrat",Arial,Helvetica,Geneva,sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.button_back404{
+  margin: 2px;
+  padding: 4px;
+  width: 180px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+  position: relative;
+  top: 25%; 
+}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.home{
+  --tw-bg-opacity: 1;
+  background-color: rgba(248,246,242,var(--tw-bg-opacity));
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.not_found{
+  height: 62vh;
+  justify-content: center;
+}
+
+/* https://img.freepik.com/foto-gratis/diseno-texturizado-suelos-madera_53876-94847.jpg 
+  background: url("https://img.freepik.com/foto-gratis/diseno-texturizado-suelos-madera_53876-94847.jpg");
+  */
+/* ../images/home.jpg */
+
+.encabezado{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
+  align-items: baseline;
+  align-content: stretch;
+  margin-right: 12px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.titleHome{
+  /* margin-right: 15%; */
+  color: black;
+  font-size: 36px;
+  font-family: "Montserrat",Arial,Helvetica,Geneva,sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.2;
+}
+
+.filters{
+  background: white;
+  height: 4vw;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
+  font-family: "Copper Pot",serif;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.filter1 {
+  font-size: 13px;
+  padding: 5px;
+  height: 28px;
+  width: 200px;
+  background-color:white; 
+  border-radius: 0.4vw;
+  color: black;
+  border-color: green;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.filter2 {
+  font-size: 13px;
+  padding: 5px;
+  height: 28px;
+  width: 95px;
+  background-color:white; 
+  border-radius: 0.4vw;
+  color: black;
+  border-color: green;
+  margin: 20px;
+  cursor: pointer;
+}
+
+ .filter3 {
+  font-size: 13px;
+  padding: 5px;
+  padding-left: 8px;
+  height: 28px;
+  width: 90px;
+  background-color:white; 
+  border-radius: 0.4vw;
+  color: black;
+  border-color: green;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.filter4 {
+  font-size: 13px;
+  padding: 5px;
+  height: 28px;
+  width: 160px;
+  background-color:white; 
+  border-radius: 0.4vw;
+  color: black;
+  border-color: green;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.buttonCreate {
+  font-size: 15px;
+  height: 31px;
+  width: 120px;
+  background-color: white;
+  font-family: inherit;
+  font-weight: 600;
+  color: gray;
+  border-radius: 0.2vw;
+  border-color: gray;
+  position: absolute;
+  top: 4.5%;
+  left: 88%;
+  cursor: pointer;
+  /* transition-duration: 0.4s; */
+}
+
+/* .buttonCreate:hover {
+background-color: gray;
+color: white
+} */
+
+.resetRecipes {
+  font-size: 15px;
+  height: 31px;
+  width: 120px;
+/*   font-family: inherit;
+  font-weight: 600; */
+  background-color: green;
+  border-radius: 0.4vw;
+  color: aliceblue;
+  margin-left: 50px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.resetRecipes:hover {
+background-color: white;
+color: black;
+border-radius: 0.4vw;
+border-color: black;
+}

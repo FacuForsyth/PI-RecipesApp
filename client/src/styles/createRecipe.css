@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.create_recipe{
+  background: url("../images/create_recipe.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head_createR{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.title_h1{
+  color: black;
+  font-size: 32px;
+  font-family: "Montserrat",Arial,Helvetica,Geneva,sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.2;
+  margin-right: 200px;
+}
+
+.button_backCR{
+  margin: 2px;
+  padding: 4px;
+  width: 130px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer; 
+}
+
+.form{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 1px;
+}
+
+.title_CR{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
+
+.label_CR{
+  color: black;
+  font-size: 16px;
+  font-family: "Montserrat",Arial,Helvetica,Geneva,sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 1.2;
+}
+
+.input_CR{
+  border-radius: 2px;
+  height: 22px;
+  width: 280px;
+}
+
+.input_summaryCR{
+  border-radius: 2px;
+  height: 58px;
+  width: 650px;
+}
+
+.input_stepsCR{
+  border-radius: 2px;
+  height: 58px;
+  width: 650px;
+}
+
+.input_scoreCR{
+  border-radius: 2px;
+  height: 22px;
+  width: 270px;
+}
+
+.input_dietsCR{
+  border-radius: 2px;
+  height: 22px;
+  width: 270px;
+}
+
+.select_dietsCR{
+  /* font-size: 13px; */
+  padding: 5px;
+  height: 25px;
+  width: 270px;
+  border-radius: 2px;
+/*   background-color:white; 
+  border-radius: 0.4vw;
+  color: black;
+  border-color: green; */
+  /* margin: 20px; */
+  cursor: pointer;
+}
+
+.button_createCR{
+  margin: 3px;
+  padding: 3px;
+  width: 150px;
+  font-family: inherit;
+  font-weight: 650;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+}
+
+.delete_order{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.6s;
+  flex-wrap: nowrap;
+}
+
+.deleteDiet{
+  margin: 5px;
+  font-family: inherit;
+}
+
+.botonX{
+  border-radius: 4px;
+  border: 2px solid red;
+  background-color: rgb(255, 255, 255);
+  color: red;
+  cursor: pointer;
+}
