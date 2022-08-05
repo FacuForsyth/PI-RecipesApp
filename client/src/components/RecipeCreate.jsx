@@ -19,7 +19,7 @@ export default function RecipeCreate() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const diets = useSelector((state) => state.diets);
+  const diets2 = useSelector((state) => state.diets);
   //console.log(diets) //trae [{id: 1, title: 'dairy free'}, {}, {}]
 
   const [errors, setErrors] = useState({});
@@ -31,14 +31,16 @@ export default function RecipeCreate() {
     healthScore: 0, 
     diets:[]  
   });
-  console.log(input)
+  //console.log(input.diets)
 
   //para rendelizarlas
   useEffect(() => {
-    dispatch(getDiets()) 
-  },[dispatch]);
+    //console.log('ef');
+    dispatch(getDiets())
+  }, [dispatch]);
 
   function handleChange(e){
+    e.preventDefault();
     setInput({
       ...input,
       //lo seteo con el value
@@ -51,6 +53,7 @@ export default function RecipeCreate() {
   };
 
   function handleChangeStep(e) {
+    e.preventDefault();
     setInput({
       ...input,
       steps: [e.target.value],
@@ -58,6 +61,7 @@ export default function RecipeCreate() {
   }
 
   function handleSelect(e){
+    e.preventDefault();
     if(!input.diets.includes(e.target.value)){
       setInput({
         ...input,
@@ -67,13 +71,16 @@ export default function RecipeCreate() {
   };
 
   function handleDelete(e){
+    //console.log('e', e.target.value)
+    e.preventDefault();
     setInput({
       ...input,
-      diets: input.diets.filter(diet => diet !== e) //filtrar por todos los que no sea ese genero que clickie, devuelve el estado nuevo sin el elemento que clickie
+      diets: input.diets.filter(diet => diet !== e.target.value) //filtrar por todos los que no sea esa dieta que clickie, devuelve el estado nuevo sin el elemento que clickie
     })
   };
 
   function handleSubmit(e){
+    //console.log('subm');
     e.preventDefault();
     dispatch(postRecipe(input));
     alert('Receta creada con exito');
@@ -97,6 +104,7 @@ export default function RecipeCreate() {
         <div className="title_CR">
             <label className="label_CR" >Title:</label>
             <input
+                key={input.id}
                 className="input_CR"
                 type='text' 
                 value={input.title} 
@@ -120,9 +128,6 @@ export default function RecipeCreate() {
             value={input.steps} 
             name='steps' 
             onChange={e => handleChangeStep(e)} />
-            {/* {errors.descripcion && (
-                <p className="error">{errors.descripcion}</p>
-            )} */}
         </div>
 
         <div className="title_CR">
@@ -145,18 +150,19 @@ export default function RecipeCreate() {
         <div className="title_CR">
         <label className="label_CR">Diets:</label>
         <select className="select_dietsCR" onChange={e => handleSelect(e)} >
-            {diets.map((diet) => {
+            {diets2.map((diet) => {
                 return <option key={diet.title} value={diet.title}>{diet.title}</option>
             })}
-        </select>
+        </select>        
+        </div>
+
         <div className="delete_order">
-        {input.diets.map(e =>
-        <div>
-          <p className="deleteDiet">{e}</p>
-          <button className="botonX" onClick={()=> handleDelete(e)}>X</button>        
+        {input.diets.map(d =>
+        <div key={d} >
+          <p className="deleteDiet">{d}</p>
+          <button className="botonX" value={d} onClick={(e)=> handleDelete(e)}>X</button>        
         </div>
         )}
-        </div>
         </div>
         
         <div className="title_CR">
@@ -173,6 +179,7 @@ export default function RecipeCreate() {
                     input.diets.length < 1 } >
                     Create Recipe!
         </button>
+        <span>*Complete all fields</span>
         </div>
     </form>
     </div>

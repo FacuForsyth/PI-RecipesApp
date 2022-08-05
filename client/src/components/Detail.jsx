@@ -6,6 +6,7 @@ import { getDetails, Detail2 } from "../actions";
 import '../styles/detail.css'
 
 export default function Detail(props){
+  //console.log(props); //props tiene un location, match y history
   const dispatch = useDispatch();
   const { id } = props.match.params //accedo al ID
   
@@ -53,5 +54,3 @@ export default function Detail(props){
     </div>
   )
 };
-
-/* src="https://i.gifer.com/14UV.gif" */

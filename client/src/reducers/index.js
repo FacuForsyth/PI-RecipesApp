@@ -40,7 +40,7 @@ function rootReducer(state = initialState, action){
       return{
         ...state,
         recipes: action.payload,
-        error:""
+        error:"",
       }
 
     case 'POST_RECIPE':
@@ -61,19 +61,10 @@ function rootReducer(state = initialState, action){
         ...state,
         recipes: recips
       };
-      
-    case 'FILTER_CREATED':
-      const recips2 = state.allRecipes
-      const createdFilter = action.payload === 'db'
-                            ? recips2.filter(rec => (typeof rec.id) === 'string')
-                            : recips2.filter(rec => !((typeof rec.id) === 'string'))
-      return{
-        ...state,
-        recipes: action.payload === 'all' ? state.allRecipes : createdFilter
-      }
     
     case 'ORDER_NAME':
       var sortedArr = action.payload === 'a-z' ?
+      //ordena los elementos del arreglo y devuelve un arreglo ordenado
       //sort para comparar 2 valores de la function y toLowerCase para que los ponga en minuscula
           state.recipes.sort(function(a, b) {
               if(a.title.toLowerCase() > b.title.toLowerCase()) { return 1 };
@@ -92,7 +83,7 @@ function rootReducer(state = initialState, action){
       };
 
     case 'ORDER_HEAD_SCORE':
-      const scoreArr = action.payload === '+' ?
+      const scoreArr = action.payload === '-' ?
       //sort para comparar 2 valores de la function
         state.recipes.sort(function(a, b) {
           if(a.healthScore > b.healthScore) { return 1 };

@@ -47,17 +47,4 @@ routerRecipe.get('/:id', async (req, res) => {
   }
 });
 
-//ELIMINAR RECETA
-routerRecipe.delete('/:id', async(req, res) => {
-  const { id } = req.params;
-  try{
-    await Recipe.destroy({
-      where: {id}
-    })
-    res.send('Recipe deleted')
-  }catch(error){
-    res.send('error deleted')
-  }
-});
-
 module.exports = routerRecipe;

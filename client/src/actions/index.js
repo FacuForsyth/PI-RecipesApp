@@ -14,7 +14,6 @@ export function getRecipes(){
 export function getDiets(){
   return async function(dispatch) {
       var res = await axios.get('http://localhost:3001/diets',{
-
       });
       return dispatch({
           type: 'GET_DIETS',
@@ -26,15 +25,9 @@ export function getDiets(){
 export function getTitleRecipes(title){
   return async function(dispatch){
       var recipesTitle = await axios.get(`http://localhost:3001/recipes?name=${title}`);
-      if(recipesTitle.data.length === 0) {
-        dispatch({
-          type: 'ERROR',
-          payload: "Not recipe found",
-        })
-      }
       return dispatch({
         type: 'GET_RECIPES_TITLE',
-        payload: recipesTitle.data
+        payload: recipesTitle.data    
       })
   }
 };
@@ -50,13 +43,6 @@ export function filterDiets(diet){
   return{
     type: 'FILTER_DIETS',
     payload: diet
-  }
-};
-
-export function filterCreated(payload){
-  return{
-    type: 'FILTER_CREATED',
-    payload
   }
 };
 

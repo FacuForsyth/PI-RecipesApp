@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector} from 'react-redux';
-import { getRecipes, getDiets, filterDiets, filterCreated, orderName, orderHeadScore } from "../actions";
+import { getRecipes, getDiets, filterDiets, orderName, orderHeadScore } from "../actions";
 import { Link } from "react-router-dom";
 import Card from "./Card";
 import Paginado from "./Paginado";
@@ -11,6 +11,7 @@ import '../styles/home.css'
 export default function Home() {
 
   const dispatch = useDispatch();
+  //const {recipes, diets} = useSelector(state => state);
   const allRecipes = useSelector(state => state.recipes);
   const allDiets = useSelector(state => state.diets);
 //paginadoooo
@@ -41,16 +42,14 @@ const paginado = (num) => {
   //boton de recetear los filtros y receteas
   function handleClick(e){
     e.preventDefault();
+    setPageNumer(1);
     dispatch(getRecipes());
+    dispatch(getDiets());
   };
 
   function handleFilterDiets(e){
-    dispatch(filterDiets(e.target.value));
-  };
-
-  function handleFilterCreated(e){
     setPageNumer(1);
-    dispatch(filterCreated(e.target.value));
+    dispatch(filterDiets(e.target.value));
   };
 
   function handleOrderName(e){
@@ -82,22 +81,20 @@ const paginado = (num) => {
 
       <nav className="filters">
         <select className="filter1" onChange={e => handleFilterDiets(e)} >
+          <option hidden={true} value='all'>Diets</option>
           {allDiets.map(diet => {
             return <option value={diet.title} key={diet.id}>{diet.title}</option>
           })}
         </select>
-        <select className="filter2" onChange={e => handleFilterCreated(e)}>
-          <option value='all'>ALL</option>
-          <option value='db'>CREATE</option>
-          <option value='api'>API</option>
-        </select>
         <select className="filter3" onChange={e => handleOrderName(e)}>
+          <option hidden={true} value='all'>Order Name</option>
           <option value='a-z'>A-Z</option>
           <option value='z-a'>Z-A</option>
         </select>
         <select className="filter4" onChange={e => handleOrderScore(e)}>
-          <option value='+'>HEAD SCORE -</option>
-          <option value='-'>HEAD SCORE +</option>
+          <option hidden={true} value='all'>Health Score</option>
+          <option value='+'>Health Score +</option>
+          <option value='-'>Health Score -</option>
         </select>
 
         <button className="resetRecipes" onClick={e => handleClick(e)} >
@@ -109,7 +106,7 @@ const paginado = (num) => {
 
       <div className="card_container">
         {
-          currentRecipes.length === 0 
+          currentRecipes.length === 0
           ? <h2 className="not_found">Not recipe found</h2> 
           : currentRecipes?.map(rec =>{
             return(
