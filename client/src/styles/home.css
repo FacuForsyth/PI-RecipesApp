@@ -64,7 +64,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: green;
+  border-color: #dda15e;
   margin: 20px;
   cursor: pointer;
 }
@@ -77,7 +77,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: green;
+  border-color: #dda15e;
   margin: 20px;
   cursor: pointer;
 }
@@ -91,7 +91,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: green;
+  border-color: #dda15e;
   margin: 20px;
   cursor: pointer;
 }
@@ -104,7 +104,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: green;
+  border-color: #dda15e;
   margin: 20px;
   cursor: pointer;
 }
@@ -137,7 +137,7 @@ color: white
   width: 120px;
 /*   font-family: inherit;
   font-weight: 600; */
-  background-color: green;
+  background-color: #dda15e;
   border-radius: 0.4vw;
   color: aliceblue;
   margin-left: 50px;

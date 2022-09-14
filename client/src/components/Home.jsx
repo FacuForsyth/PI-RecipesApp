@@ -7,6 +7,7 @@ import Card from "./Card";
 import Paginado from "./Paginado";
 import SearchBar from "./SearchBar";
 import '../styles/home.css'
+import Footer from "./Footer";
 
 export default function Home() {
 
@@ -115,6 +116,7 @@ const paginado = (num) => {
           })
         }
       </div>
+      <Footer />
     </div>
   )
 };

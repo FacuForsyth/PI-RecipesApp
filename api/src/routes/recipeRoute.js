@@ -47,4 +47,21 @@ routerRecipe.get('/:id', async (req, res) => {
   }
 });
 
+routerRecipe.delete('/:id', async (req, res) => {
+  //http://localhost:3001/recipes/id
+  const { id } = req.params;
+  try{
+    if (id.includes('-')) {
+        await Recipe.destroy({
+            where : {id}
+        })
+        res.send('Receta borrada')
+    }    
+    }
+    catch(e) {
+        console.log(e)
+        res.send('Error al borrar receta')
+    }
+});
+
 module.exports = routerRecipe;

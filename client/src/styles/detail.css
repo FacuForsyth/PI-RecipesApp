@@ -41,9 +41,24 @@
 #buttonReturn{
   padding: 4px;
   margin: 40px;
+  width: 5%;
   font-size: 17px;
   border: 2px solid grey;
   background-color: rgb(255, 255, 255);
+  color: gray;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 0.3rem;
+}
+
+#buttonDelete{
+  padding: 4px;
+  margin-left: 1%;
+  width: 8%;
+  font-size: 17px;
+  border: 2px solid grey;
+  /* background-color: rgb(255, 255, 255); */
   color: gray;
   cursor: pointer;
   font-family: inherit;

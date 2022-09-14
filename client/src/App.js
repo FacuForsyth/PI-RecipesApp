@@ -14,7 +14,7 @@ function App() {
           <Route exact path='/' component= {LandingPage} />
           <Route exact path='/home' component= {Home} />
           <Route exact path='/recipe' component={RecipeCreate} />
-          <Route exact path='/recipes/:id' component={Detail} />
+          <Route path='/recipes/:id' component={Detail} />
           <Route path= '/' component={ErrorFound} />
         </Switch>
       </div>
