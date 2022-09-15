@@ -19,13 +19,13 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { getDietApi } = require('../api/src/utils/diet')
+//const { getDietApi } = require('../api/src/utils/diet')
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
-    getDietApi();
-    console.log('diet cargados en db')
+    //getDietApi();
+    //console.log('diet cargados en db')
   });
 });
