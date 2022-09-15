@@ -11,12 +11,14 @@
 .not_found{
   height: 62vh;
   justify-content: center;
+  color: black;
+  font-size: 36px;
+  font-family: "Montserrat",Arial,Helvetica,Geneva,sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.2;
 }
-
-/* https://img.freepik.com/foto-gratis/diseno-texturizado-suelos-madera_53876-94847.jpg 
-  background: url("https://img.freepik.com/foto-gratis/diseno-texturizado-suelos-madera_53876-94847.jpg");
-  */
-/* ../images/home.jpg */
 
 .encabezado{
   list-style: none;
@@ -64,7 +66,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: #dda15e;
+  border-color: #bc6c25;
   margin: 20px;
   cursor: pointer;
 }
@@ -77,7 +79,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: #dda15e;
+  border-color: #bc6c25;
   margin: 20px;
   cursor: pointer;
 }
@@ -91,7 +93,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: #dda15e;
+  border-color: #bc6c25;
   margin: 20px;
   cursor: pointer;
 }
@@ -104,7 +106,7 @@
   background-color:white; 
   border-radius: 0.4vw;
   color: black;
-  border-color: #dda15e;
+  border-color: #bc6c25;
   margin: 20px;
   cursor: pointer;
 }
@@ -113,12 +115,12 @@
   font-size: 15px;
   height: 31px;
   width: 120px;
-  background-color: white;
+  background-color: #606c38;
   font-family: inherit;
   font-weight: 600;
-  color: gray;
-  border-radius: 0.2vw;
-  border-color: gray;
+  color: white;
+  border-radius: 0.4vw;
+  border-color: black;
   position: absolute;
   top: 4.5%;
   left: 88%;
@@ -126,10 +128,10 @@
   /* transition-duration: 0.4s; */
 }
 
-/* .buttonCreate:hover {
-background-color: gray;
+.buttonCreate:hover {
+background-color: #283618;
 color: white
-} */
+}
 
 .resetRecipes {
   font-size: 15px;
@@ -139,15 +141,15 @@ color: white
   font-weight: 600; */
   background-color: #dda15e;
   border-radius: 0.4vw;
-  color: aliceblue;
+  color: white;
   margin-left: 50px;
   cursor: pointer;
   transition-duration: 0.4s;
 }
 
 .resetRecipes:hover {
-background-color: white;
-color: black;
+background-color: #bc6c25;
+color: white;
 border-radius: 0.4vw;
 border-color: black;
 }

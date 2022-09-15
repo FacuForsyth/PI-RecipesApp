@@ -43,13 +43,19 @@
   margin: 40px;
   width: 5%;
   font-size: 17px;
-  border: 2px solid grey;
-  background-color: rgb(255, 255, 255);
-  color: gray;
+  border-radius: 0.5rem;
+  border: 2px solid #dda15e;
+  background-color: white;
+  color: #dda15e;
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
   border-radius: 0.3rem;
+}
+
+#buttonReturn:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 #buttonDelete{
@@ -57,13 +63,19 @@
   margin-left: 1%;
   width: 8%;
   font-size: 17px;
-  border: 2px solid grey;
-  /* background-color: rgb(255, 255, 255); */
-  color: gray;
+  border-radius: 0.5rem;
+  border: 2px solid #dda15e;
+  background-color: white;
+  color: #dda15e;
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
   border-radius: 0.3rem;
+}
+
+#buttonDelete:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .img_detail{

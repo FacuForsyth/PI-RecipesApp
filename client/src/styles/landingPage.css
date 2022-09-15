@@ -33,16 +33,16 @@
   font-weight: 600;
   font-size: 20px;
   border-radius: 0.5rem;
-  border: 2px solid green;
+  border: 2px solid #dda15e;
   background-color: rgb(255, 255, 255);
-  color: green;
+  color: #dda15e;
   cursor: pointer;
   position: relative;
   top: 25%; 
 }
 
 .landing-button:hover {
-  background-color: green;
+  background-color: #dda15e;
   color: white;
   border-radius: 5px;
   border: 2px solid white;

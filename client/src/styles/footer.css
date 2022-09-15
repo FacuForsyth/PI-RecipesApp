@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 .footer{
 	/* position: relative;
   background-color: whitesmoke;
@@ -7,7 +9,7 @@
   padding-left: 25px;
   color: black;
   font-size: 3rem; */
-
+  font-family: 'Kanit', sans-serif;
 	box-shadow: 2px 0 0 6px rgb(0 0 0 / 15%);
 	background: #283618;
 	color: white
@@ -22,12 +24,9 @@
   flex-direction: row;
   flex-wrap: nowrap; */
 }
-
 /* BOTON LINKEDIN */
-img {
+/* .botonredes {
 	height: 30px;
 	width: 80px;
 	border-radius: 8px;
-}
-
-
+} */

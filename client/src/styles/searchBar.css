@@ -11,7 +11,6 @@
   margin-top: 0px;
   padding-left: 5px;
   position: absolute;
-  /* top: 2.5%; */
   right: 80%;
 }
 
@@ -19,9 +18,9 @@
   font-size: 15px;
   height: 31px;
   width: 70px;
-  background-color: green;
+  background-color: #dda15e;
   /* border-radius: 0.4vw; */
-  color: aliceblue;
+  color: white;
   position: absolute;
   top: 4.5%;
   left: 63%;
@@ -30,10 +29,8 @@
 }
 
 .buttonSearch:hover {
-background-color: white;
-color: black
-/* border-radius: 0.4vw; */
-/* border-color: black; */
+  background-color: #bc6c25;
+  color: white;
 }
 
 .hide{
