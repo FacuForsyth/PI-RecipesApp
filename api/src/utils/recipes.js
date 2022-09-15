@@ -13,7 +13,7 @@ const { API_KEY_10 } = process.env; */
 
 //RECETAS DE LA API
 const getApiInfo = async (req, res) => {
-  const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_2}&addRecipeInformation=true&number=50`);
+  const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`);
 
   const apiInfo = await apiUrl.data.results.map(rec => {
     return{
