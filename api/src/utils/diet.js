@@ -12,7 +12,7 @@ const { API_KEY_9 } = process.env;
 const { API_KEY_10 } = process.env; */
 
 const getDietApi = async (req, res) => {
-    const dietsAPI = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b75a93cddbcf4489b619d5200ff4ccb5&addRecipeInformation=true&number=100`);
+    const dietsAPI = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_3}&addRecipeInformation=true&number=100`);
 
     const diets = dietsAPI.data?.results.map((rec) => rec.diets); 
     //console.log(diets)  [ [ 'gluten free', 'dairy free', 'lacto ovo vegetarian', 'vegan' ], [] ]
