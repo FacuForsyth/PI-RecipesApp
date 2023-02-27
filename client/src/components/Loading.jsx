@@ -1,9 +1,12 @@
 import React from "react";
+import img from "../images/chef_gif.gif"
 
 export default function Loading() {
   return (  
       <div className="loading1">
-        <img src="https://i.pinimg.com/originals/35/b9/3e/35b93ef8b6ff936de6d8524ebe4bfce2.gif" alt="not found" />
+        <img src={img} alt="not found" />
       </div>
   );
 }
+
+{/* <div style="width:100%;height:0;padding-bottom:98%;position:relative;"><iframe src="https://giphy.com/embed/yScQL8JL4mc6YJAfnm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/transparent-yScQL8JL4mc6YJAfnm">via GIPHY</a></p> */}
